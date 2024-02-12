@@ -16,6 +16,7 @@ import routerBindings, {
 import { App as AntdApp } from "antd";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import Layout from "./components/layout";
+import { ressources } from "./config/ressources";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
                 notificationProvider={useNotificationProvider}
                 routerProvider={routerBindings}
                 authProvider={authProvider}
+                resources={ressources}
                 options={{
                   syncWithLocation: true,
                   warnWhenUnsavedChanges: true,
