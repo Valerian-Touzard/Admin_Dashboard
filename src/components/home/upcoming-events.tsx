@@ -11,6 +11,7 @@ const UpcomingEvents = () => {
   const [isLoading, setIsLoading] = useState(false)
   const { data, isLoading: eventsLoading } = useList({
     resource: 'events',
+    pagination: {pageSize: 5},
     meta:{
       gqlQuery: DASHBORAD_CALENDAR_UPCOMING_EVENTS_QUERY
     }
