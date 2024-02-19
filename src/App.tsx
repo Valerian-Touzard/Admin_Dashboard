@@ -19,6 +19,7 @@ import Layout from "./components/layout";
 import { ressources } from "./config/ressources";
 import Create from "./pages/company/create";
 import EditPage from "./pages/company/edit";
+import List from "./pages/tasks/list";
 
 function App() {
   return (
@@ -64,6 +65,9 @@ function App() {
                       <Route path="new" element={<Create />} />
                       <Route path="edit/:id" element={<EditPage />} />
                     </Route>
+                  </Route>
+                  <Route path="/task">
+                    <Route index element={<List />}/>
                   </Route>
                 </Routes>
                 <RefineKbar />
