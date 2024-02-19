@@ -1,9 +1,25 @@
-import React from 'react'
+import {
+  KanbanBoard,
+  KanbanBoardContainer,
+} from "@/components/tasks/kanban/board";
+import KanbanColumn from "@/components/tasks/kanban/column";
+import React from "react";
 
 const List = () => {
   return (
-    <div>List</div>
-  )
-}
+    <>
+      <KanbanBoardContainer>
+        <KanbanBoard>
+          <KanbanColumn>
+            
+          </KanbanColumn>
+          <KanbanColumn>
+            
+          </KanbanColumn>
+        </KanbanBoard>
+      </KanbanBoardContainer>
+    </>
+  );
+};
 
-export default List
+export default List;
