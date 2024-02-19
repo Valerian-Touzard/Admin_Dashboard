@@ -1,4 +1,4 @@
-import { Col, Form, Row, Select } from "antd";
+import { Col, Form, InputNumber, Row, Select } from "antd";
 import { Edit, useForm, useSelect } from "@refinedev/antd";
 import { UPDATE_COMPANY_MUTATION } from "@/graphql/mutations";
 import CustomAvatar from "@/components/custom-avatar";
@@ -71,6 +71,14 @@ const EditPage = () => {
               </Form.Item>
               <Form.Item label="Company size">
                 <Select options={companySizeOptions} />
+              </Form.Item>
+              <Form.Item label="Total revenue">
+                <InputNumber 
+                    autoFocus
+                    addonBefore='$'
+                    min={0}
+                    placeholder="0,00"
+                />
               </Form.Item>
             </Form>
           </Edit>
