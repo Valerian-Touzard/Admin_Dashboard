@@ -2,6 +2,7 @@ import {
   KanbanBoard,
   KanbanBoardContainer,
 } from "@/components/tasks/kanban/board";
+import ProjectCard from "@/components/tasks/kanban/card";
 import KanbanColumn from "@/components/tasks/kanban/column";
 import KanbanItem from "@/components/tasks/kanban/item";
 import { TASKS_QUERY, TASK_STAGES_QUERY } from "@/graphql/queries";
@@ -88,7 +89,10 @@ const handleAddCard = (args: {stageId: string}) => {}
                 <KanbanItem key={task.id} id={task.id}
                     data={{ ...task, stageId: 'unnasigned' }}
                 >
-                    {task.title}
+                    <ProjectCard 
+                        {...task}
+                        dueDate={task.dueDate || undefined}
+                    />
                 </KanbanItem>
             ))}
           </KanbanColumn>
