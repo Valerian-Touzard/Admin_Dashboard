@@ -84,8 +84,8 @@ const List = ({ children }: React.PropsWithChildren) => {
 
   const handleAddCard = (args: { stageId: string }) => {
     const path = args.stageId === 'unassigned'
-    ? 'tasks/new'
-    : `tasks/new?stageId${args.stageId}`
+    ? 'new'
+    : `new?stageId${args.stageId}`
 
     replace(path)
   };
